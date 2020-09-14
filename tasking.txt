@@ -1,0 +1,24 @@
+需求
+You are given strings of different lengths.
+
+If the number of vowels (aeiou) are more than 30% of the string length then insert ‘mommy’ for each continuous set of vowels
+
+
+1.	given: strings has vowels more than 30% of the string length,but dont have continuous set of vowels
+	when: convert
+	then: return origin strings
+
+
+2.	given: strings has vowels less than 30% of the string length
+	when: convert
+	then: return origin strings
+
+
+3.	given: strings has vowels more than 30% of the string length and have continuous set of vowels
+	when: convert
+	then: return insert ‘mommy’ for each continuous set of vowels strings
+
+
+4.	given: empty strings 
+	when: convert
+	then: throw exception
