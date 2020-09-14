@@ -1,5 +1,6 @@
 public class Mommifier {
-    public String convert(String strings) {
+    public String convert(String strings) throws EmptyStringsException {
+        if(strings.isEmpty()) throw new EmptyStringsException();
         if(isEnoughVowels(strings)){
             StringBuffer result = new StringBuffer(strings);
             insertMommyInContinuousVowels(strings,result);
