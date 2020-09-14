@@ -1,11 +1,8 @@
 public class Mommifier {
     public String convert(String strings) {
-
         if(isEnoughVowels(strings)){
             StringBuffer result = new StringBuffer(strings);
-            for(int i=strings.length()-1;i>0;i--){
-                insertMommyInContinuousVowels(strings, result, i);
-            }
+            insertMommyInContinuousVowels(strings,result);
             return  result.toString();
         }else return strings;
 
@@ -21,10 +18,13 @@ public class Mommifier {
         return vowelsLength > strings.length()*0.3;
     }
 
-    private void insertMommyInContinuousVowels(String strings, StringBuffer result, int i) {
-        if(isVowels(strings, i) && isVowels(strings, i -1)){
-            result.insert(i,"mommy");
+    private void insertMommyInContinuousVowels(String strings, StringBuffer result) {
+        for(int i=strings.length()-1;i>0;i--){
+            if(isVowels(strings, i) && isVowels(strings, i -1)){
+                result.insert(i,"mommy");
+            }
         }
+
     }
 
     private boolean isVowels(String strings,  int i) {
