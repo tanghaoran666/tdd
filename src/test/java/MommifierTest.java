@@ -28,7 +28,7 @@ public class MommifierTest {
     }
 
     @Test
-    void should_return_mommy_insert_strings_when_convert_given_strings_has_enough_and_continuous_vowels_(){
+    void should_return_mommy_insert_strings_when_convert_given_strings_has_enough_and_continuous_vowels(){
         String strings = "aeidsdsdso";
         String result = mommifier.convert(strings);
         System.out.println("Debug:     " + result);
