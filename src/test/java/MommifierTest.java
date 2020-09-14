@@ -27,6 +27,15 @@ public class MommifierTest {
         assertEquals("sdfgh",result);
     }
 
+    @Test
+    void should_return_mommy_insert_strings_when_convert_given_strings_has_enough_and_continuous_vowels_(){
+        String strings = "aeidsdsdso";
+        String result = mommifier.convert(strings);
+        System.out.println("Debug:     " + result);
+        assertEquals("amommyemommyidsdsdso",result);
+    }
+
+
 
 
 }
