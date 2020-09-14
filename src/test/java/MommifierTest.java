@@ -20,5 +20,13 @@ public class MommifierTest {
         assertEquals("abedijoku",result);
     }
 
+    @Test
+    void should_return_origin_strings_when_convert_given_strings_hasnot_enough_vowels(){
+        String strings = "sdfgh";
+        String result = mommifier.convert(strings);
+        assertEquals("sdfgh",result);
+    }
+
+
 
 }
